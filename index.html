@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Webpage</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#home" class="logo"><i class="ri-brain-2-fill"></i><span>insight</span></a>
+        <ul class="navbar">
+            <li><a href="#home" data-section="home">Home</a></li>
+            <li><a href="#features" data-section="features">Services</a></li>
+            <li><a href="#about-us" data-section="about">About</a></li>
+            <li><a href="#contactus" data-section="contactus">Contact</a></li> 
+            <li class="blog-link"><a href="#latest-posts" id="blog-link">Premium</a></li>
+        </ul>
+
+        <div class="main">
+            <!-- Login button (visible when not logged in) -->
+            <a href="#" class="user" id="login-button"><i class="ri-user-2-fill"></i>Login</a>
+            
+            <!-- User profile (visible when logged in) -->
+            <div class="user-profile" id="user-profile">
+                <div class="profile-button" id="profile-button">
+                    <i class="ri-user-2-fill"></i> <span id="user-name">User</span>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <ul>
+                        <li><a href="#"><i class="ri-user-line"></i> My Profile</a></li>
+                        <li><a href="#"><i class="ri-file-list-line"></i> My Posts</a></li>
+                        <li><a href="#"><i class="ri-settings-3-line"></i> Settings</a></li>
+                        <li><a href="#" id="logout-button"><i class="ri-logout-box-r-line"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Overlay for when login panel is active -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Login Panel -->
+    <div class="login-panel" id="login-panel">
+        <div class="login-close" id="login-close"><i class="fas fa-times"></i></div>
+        <div class="login-wrapper">
+            <h2>Login</h2>
+            <form action="#" id="login-form">
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Email Address" id="email-input">
+                        <i class="icon fas fa-envelope"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Email can't be blank</div>
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                        <input type="password" placeholder="Password" id="password-input">
+                        <i class="icon fas fa-lock"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Password can't be blank</div>
+                </div>
+                <div class="pass-txt"><a href="#">Forgot password?</a></div>
+                <input type="submit" value="Login">
+            </form>
+            <div class="sign-txt">Not a member? <a href="#">Signup now</a></div>
+        </div>
+        <div class="login-credit">Sarphan Phana | DevOps</div>
+    </div>
+
+    <!-- Unauthorized Access Modal -->
+    <div class="modal" id="unauthorized-modal">
+        <div class="modal-content">
+            <h3>Login Required</h3>
+            <p>You need to be logged in to access the blog. Please login to continue.</p>
+            <div class="modal-buttons">
+                <button class="modal-button primary-button" id="modal-login-button">Login</button>
+                <button class="modal-button secondary-button" id="modal-cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slideshow Section -->
+    <section id="home" class="slideshow-container">
+        <div class="slide fade">
+            <img src="https://cdn.discordapp.com/attachments/1145701080777359491/1358279119984398347/dmuc.png?ex=67f49501&is=67f34381&hm=7f24f5a30d732b6423f39ce46b843e69f458c97b1fbd14f946d489dd086e386f&" alt="Slide 1">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="feature-container">
+            <div class="feature">
+                <i class="ri-pencil-line"></i>
+                <h3>Easy Content Creation</h3>
+                <p>Our platform allows you to create and publish blogs effortlessly with a user-friendly editor.</p>
+            </div>
+            <div class="feature">
+                <i class="ri-share-box-line"></i>
+                <h3>Engage with Your Audience</h3>
+                <p>Connect with your readers through comments, shares, and social media integrations.</p>
+            </div>
+            <div class="feature">
+                <i class="ri-file-line"></i>
+                <h3>Content Management</h3>
+                <p>Efficiently organize and manage your blog posts, categories, and tags with our intuitive dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="insight-card">
+        <div class="insight-card-container">
+            <div class="insight-card-image"></div>
+            <div class="insight-card-text">
+                <h1>Insight</h1>
+                <p>
+                    Insight is a modern blogging and content-sharing platform designed for creative minds and curious thinkers. Whether you're writing stories, sharing knowledge, or exploring ideas, Insight gives you the tools to express yourself and connect with others.
+                </p>
+            </div>
+        </div>
+    </section>
+
+      <!-- Blog Section -->
+      <section class="blog-section" id="latest-posts">
+        <div class="heading">
+          <h2>Latest Blog Posts</h2>
+          <p>Explore our most recent insights and articles</p>
+        </div>
+        <div class="blog-container">
+          <div class="blog-card">
+            <h2>Mindfulness in a Fast-Paced World</h2>
+            <p>Discover how practicing mindfulness can improve focus, reduce stress, and enhance your overall productivity.</p>
+            <a href="blog.html">Read More</a>
+          </div>
+          
+          <div class="blog-card">
+            <h2>Cybersecurity Essentials for Everyone</h2>
+            <p>Learn simple yet powerful ways to protect your digital life from everyday online threats.</p>
+            <a href="blog.html">Read More</a>
+          </div>
+          
+          <div class="blog-card">
+            <h2>The Rise of Remote Work</h2>
+            <p>How working from home is reshaping industries, careers, and the global economy.</p>
+            <a href="blog.html">Read More</a>
+          </div>
+        </div>
+      </section>
+    
+    <section id="contactus" class="contact-us">
+        <h2>Contact Us</h2>
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>CONTACT US</span>
+                            </div>
+                            <div class="app-contact">CONTACT INFO : P192571</div>
+                        </div>
+                        <div class="screen-body-item">
+                            <div class="app-form">
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="NAME">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="EMAIL">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" placeholder="CONTACT NO">
+                                </div>
+                                <div class="app-form-group message">
+                                    <input class="app-form-control" placeholder="MESSAGE">
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-cancel">CANCEL</button>
+                                    <button class="app-form-send">SEND</button>
+                                </div>
+
+                                <div class="ask-for-feedback">
+                                    <p>GIVE YOUR FEEDBACK</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Sarphan Phana Webpage Design. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
