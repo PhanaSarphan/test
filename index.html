@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight - Professional Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#hero" class="logo">
+                <i class="ri-brain-2-fill"></i>
+                <span>insight</span>
+            </a>
+            
+            <nav class="navbar">
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#blog" class="premium-link">Premium</a>
+                <a href="ai.html" class="premium-link">Ai</a>
+            </nav>
+            
+            <div class="user-actions">
+                <a href="#" class="login-btn" id="login-btn">
+                    <i class="ri-user-line"></i>
+                    <span>Login</span>
+                </a>
+                <button id="menu-toggle">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-close" id="mobile-close">
+            <i class="ri-close-line"></i>
+        </div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#blog" class="premium-link">Premium</a></li>
+            <li><a href="#ai.html" class="premium-link">AI</a></li>
+        </ul>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <div class="modal-close" id="modal-close">
+                <i class="ri-close-line"></i>
+            </div>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div style="text-align: right; margin-bottom: 20px;">
+                    <a href="#" style="color: var(--secondary-color); font-size: 0.9rem;">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Login</button>
+            </form>
+            <div class="modal-footer">
+                Don't have an account? <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="signup-modal">
+        <div class="modal">
+            <div class="modal-close" id="modal-close">
+                <i class="ri-close-line"></i>
+            </div>
+            <h2>Sign Up for an Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" class="form-control" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" class="form-control" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                 <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" class="form-control" placeholder="Enter your age" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Sign Up</button>
+            </form>
+            <div class="modal-footer">
+                Already have an account? <a href="#">Login</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="slide-container">
+            <div class="slide active">
+               <!-- <img src="https://cdn.discordapp.com/attachments/1145701080777359491/1358279119984398347/dmuc.png?ex=68104481&is=680ef301&hm=eb7ea79ac06fa0d3463244d45bf0db0970adc2ef4380fc50f81bdcf55b6f8ad1&" alt="Strategic Business Solutions">-->
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Transform Your Digital Presence</h1>
+            <p>Professional solutions to elevate your business strategy and online reputation.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn">Our Services</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Discover how our expertise can drive your business forward with our comprehensive range of professional solutions.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="ri-pencil-line"></i>
+                    <h3>Content Creation</h3>
+                    <p>Create engaging and professional content with our intuitive tools and expert guidance to captivate your audience.</p>
+                </div>
+                <div class="service-card">
+                    <i class="ri-share-line"></i>
+                    <h3>Audience Engagement</h3>
+                    <p>Build meaningful connections with your audience through interactive features and social media integration.</p>
+                </div>
+                <div class="service-card">
+                    <i class="ri-dashboard-line"></i>
+                    <h3>Content Management</h3>
+                    <p>Streamline your workflow with our powerful content management solutions for maximum efficiency and organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <h3>Your Vision. Our Expertise. Your Success.</h3>
+                    <p>At Insight, we believe in transforming digital presence into powerful business opportunities. Our team of experts is committed to delivering exceptional results that help businesses stand out in today's competitive landscape.</p>
+                    <p>With years of industry experience and a passion for innovation, we work tirelessly to ensure our clients achieve their goals and reach new heights of success.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://cdn.discordapp.com/attachments/1145701080777359491/1358279455327387780/photo_2024-10-26_12-26-36.jpg?ex=681044d1&is=680ef351&hm=8055d44195b7d29ccd83a7ce1b8d2f3eff2448a08903c577b39d086ff99c60bb&" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Have questions or ready to start your project? Reach out to our team for expert assistance.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Start a Conversation</h3>
+                    <p>We're here to answer your questions and discuss how we can help your business grow.</p>
+                    
+                    <div class="contact-details">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Diamond Business Center, Phnom Penh, Cambodia</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@insightpro.com</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>+855 123 456 789</span>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=diamond%20business%20center,%20phnom%20penh+(My%20Business%20Name)&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-control" placeholder="What is this regarding?">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-control" placeholder="Tell us how we can help you" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Insights</h2>
+                <p>Stay updated with our latest thoughts, ideas, and industry trends.</p>
+            </div>
+            <div class="blog-container">
+                <div class="blog-posts">
+                    <div class="post-card">
+                        <h3>Effective Digital Marketing Strategies for 2025</h3>
+                        <p>Discover the latest trends and strategies in digital marketing that can help your business thrive in the coming year. We explore innovative approaches to connect with your target audience.</p>
+                        <div class="post-meta">
+                            <span>April 25, 2025</span>
+                            <span>By Marketing Team</span>
+                        </div>
+                    </div>
+                    <div class="post-card">
+                        <h3>The Impact of AI on Content Creation</h3>
+                        <p>Artificial Intelligence is revolutionizing how content is created and consumed. Learn how your business can leverage AI tools to enhance your content strategy and stay ahead of the competition.</p>
+                        <div class="post-meta">
+                            <span>April 18, 2025</span>
+                            <span>By Tech Innovation Team</span>
+                        </div>
+                    </div>
+                    <div class="post-card">
+                        <h3>Building a Stronger Online Presence</h3>
+                        <p>Your online presence is crucial for business success. We share actionable tips and techniques to build a strong and engaging online identity that resonates with your customers.</p>
+                        <div class="post-meta">
+                            <span>April 10, 2025</span>
+                            <span>By Brand Development Team</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="widget">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search articles...">
+                            <button><i class="ri-search-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Content Strategy</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li><a href="#">SEO</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h3>Stay Connected</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#hero">
+                        <i class="ri-brain-2-fill"></i>
+                        <span>insight</span>
+                    </a>
+                    <p>Your partner in digital success.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Diamond Business Center, Phnom Penh, Cambodia</p>
+                    <p><i class="fas fa-envelope"></i> contact@insightpro.com</p>
+                    <p><i class="fas fa-phone"></i> +855 123 456 789</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Insight. All rights reserved.</p>
+                <p>Designed by DevOps</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
